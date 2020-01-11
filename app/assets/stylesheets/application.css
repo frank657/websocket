@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+.animate {
+  position: absolute;
+  margin: auto;
+  left: 50%;
+  top: 50%;
+  right: 50%;
+  opacity: 0;
+}

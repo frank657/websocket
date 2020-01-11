@@ -1,7 +1,18 @@
-this is home
-<br><br><br>
-<% @users.each do |user| %>
-  <%= user.id %>
-  <%= user.name %>
-  <%= link_to 'like', like_path(user), remote: true %> <br><br>
-<% end %>
+<div class="container-like">
+  this is home
+  <br><br><br>
+  <% @users.each do |user| %>
+    <%= user.id %>
+    <%= user.name %>
+    <%= link_to like_path(user), remote: true do %>
+      <i class="fas fa-heart"></i>
+    <% end %>
+
+    <br><br>
+  <% end %>
+</div>
+
+<!-- ("<i class=\"icon-search icon-white\">Add To Cart</i>") -->
+
+
+

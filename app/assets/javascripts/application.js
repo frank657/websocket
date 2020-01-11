@@ -36,6 +36,44 @@ function subscribe(id){
         // if (data.health < 1) {
         //   window.location = "/"
         // }
+        var newDiv = document.createElement('div')
+        newDiv.className = "animate"
+        newDiv.innerHTML = `<i class="fas fa-heart"></i>`
+
+        var newHeart = document.createElement('i')
+        newHeart.className = "fas fa-heart"
+
+        document.querySelector('body').appendChild(newDiv)
+        document.querySelector('#hearts-to-keep').appendChild(newHeart)
+
+        // REFERENCE: https://tobiasahlin.com/moving-letters/#4
+        var ml4 = {};
+        ml4.opacityIn = [0,1];
+        ml4.scaleIn = [0.2, 1];
+        ml4.scaleOut = 20;
+        ml4.durationIn = 200;
+        ml4.durationOut = 600;
+        ml4.delay = 0;
+
+        anime.timeline({loop: false})
+          .add({
+            targets: '.animate',
+            opacity: ml4.opacityIn,
+            scale: ml4.scaleIn,
+            duration: ml4.durationIn
+          }).add({
+            targets: '.animate',
+            opacity: 0,
+            scale: ml4.scaleOut,
+            duration: ml4.durationOut,
+            easing: "easeInExpo",
+            delay: ml4.delay
+          }).add({
+            targets: '.animate',
+            opacity: 0,
+            duration: 500,
+            delay: 0
+          });
       }
     })
   }
