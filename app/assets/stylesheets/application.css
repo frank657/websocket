@@ -19,6 +19,18 @@
   margin: auto;
   left: 50%;
   top: 50%;
-  right: 50%;
+  right: 49%;
   opacity: 0;
+  color: red;
+  /*transform-origin: center;*/
 }
+
+.heart{
+  color: red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  right: 50%;
+}
+
+

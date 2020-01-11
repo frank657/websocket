@@ -38,12 +38,12 @@ function subscribe(id){
         newHeart.className = "fas fa-heart"
 
         document.querySelector('body').appendChild(newDiv)
-        document.querySelector('#hearts-to-keep').appendChild(newHeart)
+        // document.querySelector('#hearts-to-keep').appendChild(newHeart)
 
         // REFERENCE: https://tobiasahlin.com/moving-letters/#4
         var ml4 = {};
         ml4.opacityIn = [0,1];
-        ml4.scaleIn = [0.2, 1];
+        ml4.scaleIn = [1, 0.1];
         ml4.scaleOut = 20;
         ml4.durationIn = 200;
         ml4.durationOut = 600;
@@ -55,7 +55,8 @@ function subscribe(id){
             opacity: ml4.opacityIn,
             scale: ml4.scaleIn,
             duration: ml4.durationIn
-          }).add({
+          })
+          .add({
             targets: '.animate',
             opacity: 0,
             scale: ml4.scaleOut,
