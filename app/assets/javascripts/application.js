@@ -30,6 +30,7 @@ function subscribe(id){
 
       received: function(data) {
         console.log('data', data)
+        document.getElementById('userLiked').innerText = data.liked
         // document.querySelector('progress').value = data.health
         // audio.play();
         // if (data.health < 1) {
