@@ -34,7 +34,7 @@ function subscribe(id){
 
         var newDiv = document.createElement('div')
         newDiv.className = "animate"
-        newDiv.innerHTML = `<i class="fas fa-heart"></i>`
+        newDiv.innerHTML = "<i class='fas fa-heart'></i>"
 
         // var newHeart = document.createElement('i')
         // newHeart.className = "fas fa-heart"
