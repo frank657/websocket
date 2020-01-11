@@ -14,3 +14,28 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+function subscribe(id){
+  console.log('running')
+  if (!App.userChannel || App.userChannel.consumer.connection.disconnected){
+    App.userChannel = App.cable.subscriptions.create({channel: "UserChannel" , id: id},{
+      connected: function() {
+        // Called when the subscription is ready for use on the server
+        console.log('connected', id)
+      },
+
+      disconnected: function() {
+        // Called when the subscription has been terminated by the server
+      },
+
+      received: function(data) {
+        console.log('data', data)
+        // document.querySelector('progress').value = data.health
+        // audio.play();
+        // if (data.health < 1) {
+        //   window.location = "/"
+        // }
+      }
+    })
+  }
+}

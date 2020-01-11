@@ -1,1 +1,6 @@
 this is home
+<br><br><br>
+<% @users.each do |user| %>
+  <%= user.name %>
+  <%= link_to 'like', like_path(user), remote: true %>
+<% end %>

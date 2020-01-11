@@ -1,1 +1,8 @@
 this is user page
+
+<div user data-user="<%= @user.id %>"></div>
+
+<script>
+  var userId = document.querySelector('[user]').dataset.user
+  subscribe(userId)
+</script>
