@@ -1,6 +1,7 @@
 this is home
 <br><br><br>
 <% @users.each do |user| %>
+  <%= user.id %>
   <%= user.name %>
-  <%= link_to 'like', like_path(user), remote: true %>
+  <%= link_to 'like', like_path(user), remote: true %> <br><br>
 <% end %>

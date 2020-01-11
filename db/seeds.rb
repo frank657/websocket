@@ -8,5 +8,7 @@
 User.destroy_all
 
 User.create(name: 'Sergio')
+User.create(name: 'Jason')
+User.create(name: 'Aggy')
 
 puts "created #{User.count} users"
