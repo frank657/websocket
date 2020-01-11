@@ -2,9 +2,13 @@
 <div id="hearts-to-keep"></div>
 <div user data-user="<%= @user.id %>"></div>
 
-<p id="userLiked"><%= @user.liked %></p>
+<div style="display: flex; align-items: center;">
+  <i class="fas fa-heart"></i><p id="userLiked" style="margin-left: 10px;"><%= @user.liked %></p>
+</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+<script>
   var userId = document.querySelector('[user]').dataset.user
   subscribe(userId)
 </script>

@@ -31,20 +31,16 @@ function subscribe(id){
       received: function(data) {
         console.log('data', data)
         document.getElementById('userLiked').innerText = data.liked
-        // document.querySelector('progress').value = data.health
-        // audio.play();
-        // if (data.health < 1) {
-        //   window.location = "/"
-        // }
+
         var newDiv = document.createElement('div')
         newDiv.className = "animate"
         newDiv.innerHTML = `<i class="fas fa-heart"></i>`
 
-        var newHeart = document.createElement('i')
-        newHeart.className = "fas fa-heart"
+        // var newHeart = document.createElement('i')
+        // newHeart.className = "fas fa-heart"
 
         document.querySelector('body').appendChild(newDiv)
-        document.querySelector('#hearts-to-keep').appendChild(newHeart)
+        // document.querySelector('#hearts-to-keep').appendChild(newHeart)
 
         // REFERENCE: https://tobiasahlin.com/moving-letters/#4
         var ml4 = {};
